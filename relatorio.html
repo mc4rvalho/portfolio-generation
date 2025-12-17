@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório SA-AIR - NetGuard Pro</title>
+
+  <link rel="stylesheet" href="relatorio.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>📊 Relatório SA-AIR</h1>
+      <div class="subtitle">Análise Técnica de Experiência do Usuário</div>
+      <div class="subtitle" style="font-size: 1.5em; margin-top: 15px;">NetGuard Pro / SafeGuard</div>
+      <div class="date">📅 17 de Dezembro de 2025</div>
+    </div>
+
+    <div class="content">
+
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">1</span>
+          ANÁLISE DA RETROALIMENTAÇÃO
+        </h2>
+
+        <div class="category-card">
+          <h3 class="category-title">
+            <span class="category-icon">⚡</span>
+            Desempenho e Gestão de Recursos
+          </h3>
+          <div class="rating rating-medium">
+            Satisfação: 3,8/5,0
+            <span class="stars">★★★★☆</span>
+          </div>
+          <p style="margin: 15px 0;"><strong>Principais Temas:</strong> Uso de CPU e memória sob carga elevada; lentidão
+            durante picos de tráfego.</p>
+          <div class="quote">
+            💬 "O software é eficiente" • "Geralmente suave e eficaz"
+          </div>
+        </div>
+
+        <div class="category-card">
+          <h3 class="category-title">
+            <span class="category-icon">📈</span>
+            Monitoramento e Visibilidade
+          </h3>
+          <div class="rating rating-high">
+            Satisfação: 4,5/5,0
+            <span class="stars">★★★★★</span>
+          </div>
+          <p style="margin: 15px 0;"><strong>Principais Temas:</strong> Qualidade do monitoramento de disco e sessões;
+            atualização em tempo real.</p>
+          <div class="quote">
+            💬 "Incrivelmente completo" • "Métricas são confiáveis"
+          </div>
+        </div>
+
+        <div class="category-card">
+          <h3 class="category-title">
+            <span class="category-icon">🛡️</span>
+            Failover e Confiabilidade
+          </h3>
+          <div class="rating rating-high">
+            Satisfação: 4,7/5,0
+            <span class="stars">★★★★★</span>
+          </div>
+          <p style="margin: 15px 0;"><strong>Principais Temas:</strong> Funcionamento do failover automático e
+            minimização de interrupções.</p>
+          <div class="quote">
+            💬 "Sólido como uma rocha" • "Indispensável para ambientes de alto risco"
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">2</span>
+          IDENTIFICAÇÃO DE BUGS
+        </h2>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">6</div>
+            <div class="metric-label">Problemas</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">3</div>
+            <div class="metric-label">Alta Prioridade</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">99</div>
+            <div class="metric-label">Registros</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">50</div>
+            <div class="metric-label">Feedbacks</div>
+          </div>
+        </div>
+
+        <div class="problem-card severity-high">
+          <div class="problem-header">
+            <h3 class="problem-title">🔥 Saturação de CPU e Disco</h3>
+            <span class="severity-badge severity-high">ALTA</span>
+          </div>
+          <p>Uso de CPU > 80% e Disco > 75% em servidores 2, 3, 6 e 8.</p>
+          <div class="solution-box">
+            <h4>✅ Solução Proposta</h4>
+            <ul>
+              <li>Profiling de processos críticos</li>
+              <li>Implementação de cache inteligente</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="problem-card severity-high">
+          <div class="problem-header">
+            <h3 class="problem-title">💾 Vazamento de Memória</h3>
+            <span class="severity-badge severity-high">ALTA</span>
+          </div>
+          <p>Consumo > 75% sem correlação com usuários ativos.</p>
+          <div class="solution-box">
+            <h4>✅ Solução Proposta</h4>
+            <ul>
+              <li>Auditoria profunda com heap dumps</li>
+              <li>Limites em caches (TTL)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="problem-card severity-high">
+          <div class="problem-header">
+            <h3 class="problem-title">🔄 Failover Frequente</h3>
+            <span class="severity-badge severity-medium">MÉDIA-ALTA</span>
+          </div>
+          <p>54% dos registros apresentam eventos de failover automático.</p>
+          <div class="solution-box">
+            <h4>✅ Solução Proposta</h4>
+            <ul>
+              <li>Revisão de thresholds de CPU/latência</li>
+              <li>Throttling temporário</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">3</span>
+          PLANO DE AÇÃO ESTRATÉGICO
+        </h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-title">Curto Prazo (1-2 Meses)</div>
+            <p>Auditoria de memória, otimização de CPU e ajuste de thresholds de failover.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Médio Prazo (3-6 Meses)</div>
+            <p>Revisão do algoritmo de balanceamento e observabilidade avançada.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Longo Prazo (6-12 Meses)</div>
+            <p>Arquitetura escalável horizontal e Machine Learning para previsão de carga.</p>
+          </div>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card">
+            <h4>🚀 Impacto Esperado</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <span class="impact-item">⬇️ 60% Picos de CPU</span>
+              <span class="impact-item">⬇️ 50% Failovers</span>
+              <span class="impact-item">⬆️ 25% Duração Sessão</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conclusion-box">
+        <h2>Conclusão</h2>
+        <p>O NetGuard Pro demonstra uma base técnica sólida com <span class="highlight">99,5%+ de uptime</span>. Os
+          problemas identificados são pontuais e focados em otimização.</p>
+        <p>Prioridade de ação: <strong>Alta</strong> para otimização de recursos (CPU/memória), <strong>Média</strong>
+          para balanceamento e usabilidade.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="https://drive.google.com/file/d/1N_oefaAUBRzY1Juk5YXMMB1IlTmXfbWk/view?usp=sharing" target="_blank"
+      style="background: #e74c3c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+      📥 Baixar Versão em PDF
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Generation Brasil | NetGuard Solutions</p>
+  </footer>
+</body>
+
+</html>

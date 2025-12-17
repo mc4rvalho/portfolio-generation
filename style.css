@@ -1,243 +1,248 @@
 /* =========================================
-   VARIÁVEIS DE TEMA (ROOT)
-   Facilita a alteração de cores globais
+   1. VARIÁVEIS DE TEMA (ROOT)
+   Definição centralizada de cores para fácil manutenção.
    ========================================= */
 :root {
-    --primary-color: #004aad; /* Azul Institucional NetGuard */
-    --primary-hover: #003380; /* Azul Escuro para Hover */
-    --accent-color: #2ecc71;  /* Verde para o segundo projeto */
-    --accent-hover: #27ae60;  /* Verde Escuro para Hover */
-    --bg-color: #f4f4f9;      /* Cor de fundo da página */
-    --card-bg: #ffffff;       /* Cor de fundo dos cards */
-    --text-primary: #333333;
-    --text-secondary: #555555;
-    --text-muted: #888888;
+  --primary-color: #004aad;   /* Azul Institucional (Identidade NetGuard) */
+  --primary-hover: #003380;   /* Tom mais escuro para interações (Hover) */
+  --accent-color: #2ecc71;    /* Verde (Identidade secundária/Status) */
+  --accent-hover: #27ae60;    /* Verde escuro para hover */
+  --bg-color: #f4f4f9;        /* Cor de fundo global (Off-white) */
+  --card-bg: #ffffff;         /* Fundo dos componentes (Cards) */
+  --text-primary: #333333;    /* Texto principal (Contraste alto) */
+  --text-secondary: #555555;  /* Texto secundário (Descrições) */
+  --text-muted: #888888;      /* Texto de apoio (Legendas/Rodapés) */
 }
 
 /* =========================================
-   RESET E ESTILOS GERAIS
+   2. RESET E ESTILOS GERAIS
+   Padronização do Box Model e tipografia base.
    ========================================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding não aumente o tamanho dos elementos */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding/border não aumentem a largura total */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    line-height: 1.6;
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;      /* Ocupa no mínimo 100% da altura da viewport */
+  display: flex;
+  flex-direction: column; /* Layout vertical (Header -> Main -> Footer) */
 }
 
 /* =========================================
-   CABEÇALHO (HEADER)
+   3. CABEÇALHO (HEADER)
    ========================================= */
 header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 20px 0;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
 }
 
 header h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
 }
 
 header .subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    font-weight: 400;
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 /* =========================================
-   CONTAINER DE LAYOUT (GRID/FLEX)
+   4. LAYOUT PRINCIPAL (GRID/FLEX)
+   Container responsivo para os cards de projeto.
    ========================================= */
 .projects-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1; /* Empurra o footer para baixo */
+  display: flex;
+  flex-wrap: wrap;        /* Permite que os cards quebrem para a linha de baixo */
+  justify-content: center;/* Centraliza os cards na tela */
+  gap: 30px;              /* Espaçamento entre os cards */
+  max-width: 1200px;
+  margin: 0 auto;         /* Centraliza o container na página */
+  flex: 1;                /* Faz o main ocupar o espaço disponível, empurrando o footer */
 }
 
 /* =========================================
-   COMPONENTE: CARD DO PROJETO
+   5. COMPONENTE: CARD DO PROJETO
+   Estilização modular dos cartões.
    ========================================= */
 .project-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Sombra suave */
-    width: 100%;
-    max-width: 500px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid var(--primary-color); /* Identidade visual no topo */
-    display: flex;
-    flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra suave para profundidade */
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave no hover */
+  border-top: 5px solid var(--primary-color); /* Identidade visual no topo */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Variação para o segundo projeto (Verde) */
+/* Modificador: Variação de cor para o segundo projeto */
 .project-card.second-project {
-    border-top-color: var(--accent-color);
+  border-top-color: var(--accent-color);
 }
 
-/* Efeito Hover no Card */
+/* Interatividade: Efeito de "levantar" ao passar o mouse */
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Garante altura total para alinhar rodapé no fundo */
 }
 
-/* Cabeçalho do Card */
+/* Cabeçalho do Card (Título + Badge) */
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .card-header h2 {
-    font-size: 1.5rem;
-    color: #222;
+  font-size: 1.5rem;
+  color: #222;
 }
 
-/* Badges de Status */
+/* Badges de Status (Pílulas coloridas) */
 .status {
-    font-size: 0.75rem;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .status.completed {
-    background-color: #e0f7fa;
-    color: #006064;
+  background-color: #e0f7fa;
+  color: #006064;
 }
 
 .status.ongoing {
-    background-color: #fff3e0;
-    color: #e65100;
+  background-color: #fff3e0;
+  color: #e65100;
 }
 
 /* Conteúdo Textual */
 .description {
-    margin-bottom: 25px;
-    color: var(--text-secondary);
-    text-align: justify;
+  margin-bottom: 25px;
+  color: var(--text-secondary);
+  text-align: justify;
 }
 
-/* Lista de Funcionalidades */
+/* Lista de Funcionalidades (Box Cinza) */
 .features {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    border-left: 3px solid #ddd;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border-left: 3px solid #ddd;
 }
 
 .features h4 {
-    margin-bottom: 12px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
 }
 
 .features ul {
-    list-style-position: inside;
-    padding-left: 5px;
+  list-style-position: inside;
+  padding-left: 5px;
 }
 
 .features li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
-/* Rodapé Interno do Card (Equipe) */
+/* Rodapé Interno do Card (Membros da Equipe) */
 .team {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-    margin-top: auto; /* Empurra para o fundo se houver espaço sobrando */
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: auto; /* Técnica Flexbox: Empurra este elemento para o fundo do container */
 }
 
 /* =========================================
-   BOTÕES DE AÇÃO
+   6. BOTÕES DE AÇÃO (CTA)
    ========================================= */
 .card-actions {
-    margin-top: 25px;
-    text-align: center;
+  margin-top: 25px;
+  text-align: center;
 }
 
 .btn-download {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease;
-    width: 100%; /* Botão ocupa toda a largura em mobile */
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+  width: 100%; /* Botão ocupa toda a largura disponível */
 }
 
 .btn-download:hover {
-    background-color: var(--primary-hover);
+  background-color: var(--primary-hover);
 }
 
-/* Botão Secundário (Cinza) */
+/* Variação de Botão Secundário (Cinza) */
 .btn-download.secondary {
-    background-color: #95a5a6;
-    cursor: default;
+  background-color: #95a5a6;
+  cursor: default;
 }
+
 .btn-download.secondary:hover {
-    background-color: #7f8c8d;
+  background-color: #7f8c8d;
 }
 
 /* =========================================
-   RODAPÉ GERAL
+   7. RODAPÉ GERAL
    ========================================= */
 footer {
-    text-align: center;
-    margin-top: 60px;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    padding: 20px 0;
+  text-align: center;
+  margin-top: 60px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 20px 0;
 }
 
 /* =========================================
-   RESPONSIVIDADE (MOBILE)
+   8. RESPONSIVIDADE (MOBILE)
+   Ajustes para telas menores que 768px (Tablets/Celulares)
    ========================================= */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-    }
-    
-    .project-card {
-        max-width: 100%; /* Card ocupa 100% da tela no celular */
-    }
+  .projects-container {
+    flex-direction: column; /* Empilha os cards verticalmente */
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .project-card {
+    max-width: 100%; /* Card ocupa 100% da largura da tela */
+  }
 }
